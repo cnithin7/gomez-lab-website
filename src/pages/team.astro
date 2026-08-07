@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+const team = (await getCollection("people")).sort((a,b) => a.data.order - b.data.order);
+---
+<BaseLayout title="Team | Gomez Lab" description="Meet the scientists and collaborators of the Gomez Lab at Washington University School of Medicine.">
+<section class="page-hero"><p class="eyebrow">People</p><h1>A collaborative lab for computational cancer science.</h1><p>We foster a supportive environment where computational rigor, biological curiosity, mentorship, and collaboration drive the work.</p></section>
+<section class="team-grid">{team.map(({data:p, body}) => <article class="person"><img src={p.image} alt={p.name}/><div class="person-content"><h2>{p.name}</h2><div class="role">{p.role}</div><p>{body}</p><div class="links">{p.email&&<a href={`mailto:${p.email}`}>Email</a>}{p.website&&<a href={p.website} target="_blank">Website ↗</a>}{p.orcid&&<a href={p.orcid} target="_blank">ORCID ↗</a>}{p.scholar&&<a href={p.scholar} target="_blank">Scholar ↗</a>}</div></div></article>)}</section>
+<div class="funders"><img src="/images/funding/nci-logo.png" alt="National Cancer Institute"/><img src="/images/funding/Washu_medicine.png" alt="Washington University School of Medicine"/><img src="/images/funding/siteman-logo-bg.png" alt="Siteman Cancer Center"/></div>
+</BaseLayout>

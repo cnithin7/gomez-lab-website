@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://feliciagomezlab.org/sitemap.xml

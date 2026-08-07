@@ -1,0 +1,9 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+const items = (await getCollection("updates")).sort((a,b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<BaseLayout title="Gallery & Lab News | Gomez Lab" description="News, teaching, presentations, and community moments from the Gomez Lab.">
+<section class="page-hero"><p class="eyebrow">Lab life</p><h1>Science, mentorship, and community.</h1><p>Highlights from teaching, research presentations, collaboration, and time together beyond the bench and terminal.</p></section>
+<section class="gallery-grid">{items.map(({data:u, body})=><article class="gallery-item"><img src={u.image} alt={u.title}/><div class="body"><p class="label">{u.displayDate}</p><h2>{u.title}</h2><p>{body}</p></div></article>)}</section>
+</BaseLayout>

@@ -1,0 +1,92 @@
+---
+title: Novel Approach Identifies SNPs in SLC2A10 and KCNK9 with Evidence for Parent-of-Origin Effect on Body Mass Index
+authors:
+- Clive J. Hoggart
+- Giulia Venturini
+- Massimo Mangino
+- Felicia Gomez
+- Giulia Ascari
+- Jing Hua Zhao
+- Alexander Teumer
+- Thomas W. Winkler
+- Natalia Tšernikova
+- Jian'an Luan
+- Evelin Mihailov
+- Georg B. Ehret
+- Weihua Zhang
+- David Lamparter
+- Tõnu Esko
+- Aurelien Macé
+- Sina Rüeger
+- Pierre-Yves Bochud
+- Matteo Barcella
+- Yves Dauvilliers
+- Beben Benyamin
+- David M. Evans
+- Caroline Hayward
+- Mary F. Lopez
+- Lude Franke
+- Alessia Russo
+- Iris M. Heid
+- Erika Salvi
+- Sailaja Vendantam
+- Dan E. Arking
+- Eric Boerwinkle
+- John C. Chambers
+- Giovanni Fiorito
+- Harald Grallert
+- Simonetta Guarrera
+- Georg Homuth
+- Jennifer E. Huffman
+- David Porteous
+- Darius Moradpour
+- Alex Iranzo
+- Johannes Hebebrand
+- John P. Kemp
+- Gert J. Lammers
+- Vincent Aubert
+- Markus H. Heim
+- Nicholas G. Martin
+- Grant W. Montgomery
+- Rosa Peraita-Adrados
+- Joan Santamaria
+- Francesco Negro
+- Carsten O. Schmidt
+- Robert A. Scott
+- Tim D. Spector
+- Konstantin Strauch
+- Henry Völzke
+- Nicholas J. Wareham
+- Wei Yuan
+- Jordana T. Bell
+- Aravinda Chakravarti
+- Jaspal S. Kooner
+- Annette Peters
+- Giuseppe Matullo
+- Henri Wallaschofski
+- John B. Whitfield
+- Fred Paccaud
+- Peter Vollenweider
+- Sven Bergmann
+- Jacques S. Beckmann
+- Mehdi Tafti
+- Nicholas D. Hastie
+- Daniele Cusi
+- Murielle Bochud
+- Timothy M. Frayling
+- Andres Metspalu
+- Marjo-Riitta Jarvelin
+- André Scherag
+- George Davey Smith
+- Ingrid B. Borecki
+- Valentin Rousson
+- Joel N. Hirschhorn
+- Carlo Rivolta
+- Ruth J. F. Loos
+- Zoltán Kutalik
+journal: PLoS Genetics
+date: '2014-07-31'
+link: https://doi.org/f3pkdz
+doi: 10.1371/journal.pgen.1004508
+featured: false
+---

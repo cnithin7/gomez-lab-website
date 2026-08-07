@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const publications = (await getCollection("publications")).sort((a,b) => b.data.date.valueOf() - a.data.date.valueOf());
+const recent = publications.slice(0, 3);
+const people = (await getCollection("people")).sort((a,b) => a.data.order - b.data.order).slice(0, 5);
+const updates = (await getCollection("updates")).sort((a,b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 3);
+---
+<BaseLayout title="Gomez Lab | Cancer Genomics at WashU Medicine" description="The Gomez Lab at Washington University School of Medicine uses computational genomics to study lymphoma, multiple myeloma, and cancer disparities.">
+  <section class="home-intro">
+    <div class="home-intro-copy">
+      <p class="lab-kicker">Gomez Lab · Washington University School of Medicine</p>
+      <h1>We study cancer through genomics and computation.</h1>
+      <p class="home-lede">Our small research group develops and applies computational approaches to understand cancer biology, with particular interests in lymphoma, multiple myeloma, and representation in cancer genomics.</p>
+      <p class="home-welcome">We are based in St. Louis and work closely with collaborators across WashU Medicine and the Siteman Cancer Center.</p>
+      <div class="text-links"><a href="/research">Our research →</a><a href="/team">Meet the lab →</a></div>
+    </div>
+    <figure class="home-photo">
+      <img src="/images/team/FG.jpg" alt="Felicia Gomez, principal investigator of the Gomez Lab" />
+      <figcaption><strong>Felicia Gomez, PhD</strong><br/>Principal Investigator</figcaption>
+    </figure>
+  </section>
+
+  <section class="lab-strip">
+    <div><strong>What we work on</strong></div><div>Lymphoma genomics</div><div>Multiple myeloma</div><div>Single-cell & sequencing analysis</div><div>Cancer disparities</div>
+  </section>
+
+  <section class="home-section">
+    <div class="home-section-heading"><p class="eyebrow">In the lab</p><h2>Current directions</h2><p>These are some of the questions and datasets keeping us busy right now.</p></div>
+    <div class="work-list">
+      <article><span>01</span><div><h3>Understanding rare malignant cells in lymphoma</h3><p>We use genomic and single-cell approaches to study Hodgkin and non-Hodgkin lymphoma, where the malignant population can be difficult to isolate and characterize.</p></div></article>
+      <article><span>02</span><div><h3>Studying disparities in multiple myeloma</h3><p>We examine genomic, ancestry-associated, transcriptomic, and microenvironmental features that may contribute to differences in disease burden and outcomes.</p></div></article>
+      <article><span>03</span><div><h3>Making sequencing analyses reproducible</h3><p>We build practical computational workflows for high-throughput sequencing and share methods, tutorials, and code when they are useful to others.</p></div></article>
+    </div>
+  </section>
+
+  <section class="home-section people-section">
+    <div class="home-section-heading"><p class="eyebrow">People</p><h2>Meet our group</h2><p>A small team of researchers working across cancer biology, genomics, and bioinformatics.</p></div>
+    <div class="people-row">{people.map(({data:p}) => <a class="person-mini" href="/team"><img src={p.image} alt={p.name}/><strong>{p.name}</strong><span>{p.role}</span></a>)}</div>
+  </section>
+
+  <section class="home-section lab-life-section">
+    <div class="home-section-heading"><p class="eyebrow">Around the lab</p><h2>Recent moments</h2></div>
+    <div class="lab-moments">{updates.map(({data:u}) => <a href="/gallery"><img src={u.image} alt={u.title}/><div><strong>{u.title}</strong><span>{u.displayDate}</span></div></a>)}</div>
+  </section>
+
+  <section class="home-section publications-home">
+    <div class="home-section-heading"><p class="eyebrow">Publications</p><h2>Recent work</h2></div>
+    <div class="pub-grid">{recent.map(({data:p}) => <article class="pub"><div class="pub-year">{p.date.getFullYear()}</div><div><h3>{p.title}</h3><p>{p.journal}</p></div><a class="doi" href={p.link} target="_blank">Paper ↗</a></article>)}</div>
+    <p class="simple-more"><a href="/research">See all publications →</a></p>
+  </section>
+
+  <div class="funders"><img src="/images/funding/nci-logo.png" alt="National Cancer Institute"/><img src="/images/funding/Washu_medicine.png" alt="Washington University School of Medicine"/><img src="/images/funding/ACS-1.png" alt="American Cancer Society"/><img src="/images/funding/siteman-logo-bg.png" alt="Siteman Cancer Center"/></div>
+</BaseLayout>

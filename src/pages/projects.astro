@@ -1,0 +1,9 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+const projects = (await getCollection("projects")).sort((a,b) => a.data.order - b.data.order);
+---
+<BaseLayout title="Projects | Gomez Lab" description="Major research projects in lymphoma genomics and multiple myeloma health disparities from the Gomez Lab.">
+<section class="page-hero"><p class="eyebrow">Projects</p><h1>Questions where genomics can change what we know.</h1><p>Our projects use high-resolution genomic approaches to study difficult cancer biology and address persistent gaps in representation and outcomes.</p></section>
+<section class="cards">{projects.map(({data:p}) => <article class="project-card"><img src={p.image} alt={p.title}/><div class="body"><p class="label">{p.label}</p><h2>{p.title}</h2><p>{p.summary}</p></div></article>)}</section>
+</BaseLayout>

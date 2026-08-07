@@ -1,0 +1,79 @@
+---
+title: Gene-Centric Meta-Analysis of Lipid Traits in African, East Asian and Hispanic Populations
+authors:
+- Clara C. Elbers
+- Yiran Guo
+- Vinicius Tragante
+- Erik P. A. van Iperen
+- Matthew B. Lanktree
+- Berta Almoguera Castillo
+- Fang Chen
+- Lisa R. Yanek
+- Mary K. Wojczynski
+- Yun R. Li
+- Bart Ferwerda
+- Christie M. Ballantyne
+- Sarah G. Buxbaum
+- Yii-Der Ida Chen
+- Wei-Min Chen
+- L. Adrienne Cupples
+- Mary Cushman
+- Yanan Duan
+- David Duggan
+- Michele K. Evans
+- Jyotika K. Fernandes
+- Myriam Fornage
+- Melissa Garcia
+- W. Timothy Garvey
+- Nicole Glazer
+- Felicia Gomez
+- Tamara B. Harris
+- Indrani Halder
+- Virginia J. Howard
+- Margaux F. Keller
+- M. Ilyas Kamboh
+- Charles Kooperberg
+- Stephen B. Kritchevsky
+- Andrea LaCroix
+- Kiang Liu
+- Yongmei Liu
+- Kiran Musunuru
+- Anne B. Newman
+- N. Charlotte Onland-Moret
+- Jose Ordovas
+- Inga Peter
+- Wendy Post
+- Susan Redline
+- Steven E. Reis
+- Richa Saxena
+- Pamela J. Schreiner
+- Kelly A. Volcik
+- Xingbin Wang
+- Salim Yusuf
+- Alan B. Zonderland
+- Sonia S. Anand
+- Diane M. Becker
+- Bruce Psaty
+- Daniel J. Rader
+- Alex P. Reiner
+- Stephen S. Rich
+- Jerome I. Rotter
+- Michèle M. Sale
+- Michael Y. Tsai
+- Ingrid B. Borecki
+- Robert A. Hegele
+- Sekar Kathiresan
+- Michael A. Nalls
+- Herman A. Taylor
+- Hakon Hakonarson
+- Suthesh Sivapalaratnam
+- Folkert W. Asselbergs
+- Fotios Drenos
+- James G. Wilson
+- Brendan J. Keating
+journal: PLoS ONE
+date: '2012-12-07'
+link: https://doi.org/gm3fc4
+doi: 10.1371/JOURNAL.PONE.0050198
+featured: false
+---

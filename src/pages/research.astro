@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+const pubs = (await getCollection("publications")).sort((a,b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<BaseLayout title="Research & Publications | Gomez Lab" description="Research and selected publications from the Gomez Lab in cancer genomics, lymphoma, precision medicine, and genomic diversity.">
+<section class="page-hero"><p class="eyebrow">Research</p><h1>Computational approaches to cancer genomics.</h1><p>Our work combines genome sequencing, statistical genetics, bioinformatics, and emerging single-cell approaches to understand cancer biology and improve precision oncology.</p></section>
+<section class="section"><div class="research-grid"><article class="research-card"><span>Lymphoma</span><div><h3>Rare malignant populations</h3><p>Deep genomic profiling of Hodgkin and non-Hodgkin lymphoma to reveal clonal origins, somatic variation, and tumor biology.</p></div></article><article class="research-card"><span>Disparities</span><div><h3>Multiple myeloma</h3><p>Investigating genomic, transcriptomic, ancestry-associated, and tumor microenvironment differences relevant to disparities in multiple myeloma.</p></div></article><article class="research-card"><span>Methods</span><div><h3>Data-driven oncology</h3><p>Developing reproducible computational workflows that connect high-throughput sequencing data with clinically meaningful interpretation.</p></div></article></div></section>
+<section class="section"><div class="section-head"><div><p class="eyebrow">Publication archive</p><h2>Selected publications</h2></div><p>Each publication is maintained as an individual content file in the repository.</p></div><div class="pub-grid">{pubs.map(({data:p})=><article class="pub"><div class="pub-year">{p.date.getFullYear()}</div><div><h3>{p.title}</h3><p>{p.authors.join(", ")}</p><p>{p.journal}</p></div><a class="doi" href={p.link} target="_blank">{p.doi} ↗</a></article>)}</div></section>
+</BaseLayout>
